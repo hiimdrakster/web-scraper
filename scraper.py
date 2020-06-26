@@ -1,24 +1,3 @@
-'''
-I need someone to build a Program (or script) that copies TEXT from a million websites and saves them to a text document (txt). 
-The program can be built as a Python script or an Executable (or suggest an alternative).
-
-This is how it should work:
-1 > Upload website(s) into the Program
-2 > Run the Program
-3 > Program will go to 100 websites, and then copies the text from each one, and paste them into a text document (.txt)
-4 > Program will then save the text document for those 100 websites
-5 > Program will repeat steps 3, 4 and 5 for the next 100 websites
-
-The Program Requirements:
-1) The Program must be "simple" to use
-2) The Program must allow me to enter unlimited number of websites quickly (bulk upload)
-3) The Program must NEVER miss a website (so if the website is lagging or freezes,
-then the program must wait for the page to load. If the website doesn't load after a while,
-then it needs to attempt to reload the page.
-4) The Program must have a LOG FILE that shows which websites have been completed,
-so I can continue the Program where it left off.
-'''
-
 import sys
 import requests
 import urllib.request
