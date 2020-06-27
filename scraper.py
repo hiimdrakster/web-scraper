@@ -43,7 +43,7 @@ usage = '''- Invalid arguments -
         arg1: Path of the .csv input file containing link
             (Format must be: http://example.com
                              https://example.com)
-        arg2: Path for the .txt output file
+        arg2: Path of the .txt output file
 
         arg3: HTML tag to scrape
     '''
