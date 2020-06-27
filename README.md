@@ -5,4 +5,4 @@ This python-coded web scraper takes 3 values as arguments on it's execution:
         (Format must be: http://example.com
                          https://example.com)
 * Arg2: Path of the .txt output file
-* Arg3: HTML tag to scrape (Example: p)
+* Arg3: HTML tags to scrape (Example: h1,p)
