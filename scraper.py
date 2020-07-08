@@ -1,6 +1,5 @@
 import sys
 import requests
-import urllib.request
 import time
 import re
 from bs4 import BeautifulSoup #This will probably need to be installed with 'pipX install beautifulsoup4' where X is your pip version
