@@ -12,17 +12,16 @@ def scrape(web):
     #Setup the output in append mode:
     #   (each time the file is written it will jump to the end of the file and start writing from there)
     #The output path will be taken as the second argument
-    output = open(sys.argv[2],"a")
-    
-    soup = BeautifulSoup(response.text,"html.parser")
-    time.sleep(5)   #Waits 5 sec to load the page
-    #Store the specified tags in an array
-    tags = sys.argv[3].split(",")
-    #BS will select any element with the specified tag at the third argument
-    for tag in tags:
-        for text in soup.findAll(tag):
-            strout = re.sub(r'<.+?>','',str(text))  #Removes tags ('<p>...</p>') and it's atributes from the output text
-            output.write(strout)
+    with open(sys.argv[2],"a") as output:
+        soup = BeautifulSoup(response.text,"html.parser")
+        time.sleep(5)   #Waits 5 sec to load the page
+        #Store the specified tags in an array
+        tags = sys.argv[3].split(",")
+        #BS will select any element with the specified tag at the third argument
+        for tag in tags:
+            for text in soup.findAll(tag):
+                strout = re.sub(r'<.+?>','',str(text))  #Removes tags ('<p>...</p>') and it's atributes from the output text
+                output.write(strout)
 
 def splitfile(file):
     #First read the file and store all data into a string
